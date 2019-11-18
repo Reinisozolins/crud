@@ -1,5 +1,5 @@
 # crud
-I need fix delete function bug and there is error with table but this java web app working.
+I need fix delete function bug but other crud operations working.
 
 I try made crud app like this https://www.youtube.com/watch?v=qZs0885Mdm0
 but i use h2 db.
