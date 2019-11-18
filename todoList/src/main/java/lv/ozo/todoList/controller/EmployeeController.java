@@ -2,9 +2,7 @@ package lv.ozo.todoList.controller;
 
 
 import lv.ozo.todoList.model.Employee;
-import lv.ozo.todoList.service.EmployeeServiceImpl;
 import lv.ozo.todoList.service.EmployeeServiceInterface;
-import org.hibernate.sql.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -68,7 +66,6 @@ public class EmployeeController {
 
     }
 
-
     @PostMapping(value="/update")
     public String update (@ModelAttribute Employee employee, RedirectAttributes redirectAttributes, Model model) {
         Employee dbEmployee = employeeServiceInterface.update(employee);
@@ -81,7 +78,6 @@ public class EmployeeController {
             return "view/employees";
         }
     }
-
     @GetMapping(value ="/deleteEmployee/{id}")
     public String deleteEmployee(@PathVariable Long id, RedirectAttributes redirectAttributes) {
         employeeServiceInterface.delete(id);
@@ -89,6 +85,4 @@ public class EmployeeController {
 
         return "redirect:/";
     }
-
-
 }
